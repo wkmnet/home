@@ -14,7 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
  * 代码有编辑器 IntelliJ IDEA 完成
@@ -28,7 +27,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  * To change this template use File | Settings | File and Code Templates.
  */
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer {
+public class Application {
 
     //日志
     private static Logger LOG = LoggerFactory.getLogger(Application.class);
