@@ -33,7 +33,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-dependency-plugin-version>2.10</maven-dependency-plugin-version>
     <spring-boot-version>1.5.4.RELEASE</spring-boot-version>
-    <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+    <maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
     <groovy-all-version>2.4.6</groovy-all-version>
   </properties>
 
@@ -66,7 +66,7 @@
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-compiler-plugin</artifactId>
-      <version>${maven-compiler-plugin.version}</version>
+      <version>${maven-compiler-plugin-version}</version>
     </dependency>
 
   </dependencies>
@@ -83,7 +83,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>${maven-compiler-plugin.version}</version>
+            <version>${maven-compiler-plugin-version}</version>
             <configuration>
               <source>1.8</source>
               <target>1.8</target>
@@ -119,7 +119,7 @@
     <profile>
       <id>flat-classpath-jar</id>
       <build>
-        <finalName>undertow-servlet</finalName>
+        <finalName>web-spring</finalName>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
