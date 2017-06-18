@@ -13,8 +13,12 @@ package xin.wukm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * 代码有编辑器 IntelliJ IDEA 完成
@@ -27,6 +31,9 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  * ---------------------------------
  * To change this template use File | Settings | File and Code Templates.
  */
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
@@ -42,5 +49,10 @@ public class Application extends SpringBootServletInitializer {
         } catch (Exception e){
             LOG.error("start application error : ", e);
         }
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
     }
 }
