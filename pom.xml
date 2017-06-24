@@ -25,8 +25,7 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>openshift for me</name>
-  <url>http://maven.apache.org</url>
+  <name>home</name>
   <description>Undertow Servlet Example for OpenShift Java S2I</description>
 
   <properties>
@@ -44,6 +43,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.5.4.RELEASE</version>
+    <relativePath />
   </parent>
 
   <dependencies>
