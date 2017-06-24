@@ -35,8 +35,10 @@
     <version.jboss.logmanager>2.0.3.Final-redhat-1</version.jboss.logmanager>
     <maven-dependency-plugin-version>2.10</maven-dependency-plugin-version>
     <spring-boot-version>1.5.4.RELEASE</spring-boot-version>
+    <spring-boot-start-velocity-version>1.4.7.RELEASE</spring-boot-start-velocity-version>
     <maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
     <groovy-all-version>2.4.6</groovy-all-version>
+    <velocity-version>1.7</velocity-version>
   </properties>
 
   <parent>
@@ -58,6 +60,18 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
       <version>${spring-boot-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-velocity</artifactId>
+      <version>${spring-boot-start-velocity-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity</artifactId>
+      <version>${velocity-version}</version>
     </dependency>
 
     <dependency>
@@ -87,7 +101,7 @@
   </dependencies>
 
   <build>
-    <finalName>ola</finalName>
+    <finalName>home</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

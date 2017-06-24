@@ -30,7 +30,7 @@ import java.util.Map;
  * To change this template use File | Settings | File and Code Templates.
  */
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping(value = "/api")
 public class SystemController extends BaseController {
 
     @RequestMapping(value = "/info",method = RequestMethod.GET)

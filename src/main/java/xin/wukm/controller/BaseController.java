@@ -10,6 +10,9 @@
  */
 package xin.wukm.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * 代码有编辑器 IntelliJ IDEA 完成
  * Project name : home
@@ -22,4 +25,6 @@ package xin.wukm.controller;
  * To change this template use File | Settings | File and Code Templates.
  */
 public abstract class BaseController {
+
+    protected Logger logger = LoggerFactory.getLogger(this.getClass());
 }
