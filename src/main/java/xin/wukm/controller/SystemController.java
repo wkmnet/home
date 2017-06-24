@@ -59,4 +59,12 @@ public class SystemController extends BaseController {
         detail.put("dateTime", DateFormatUtils.ISO_DATETIME_FORMAT.format(c));
         return detail;
     }
+
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    @ResponseBody
+    public Object hello(){
+        Map<String,Object> detail = new HashMap();
+        detail.put("time", System.currentTimeMillis());
+        return detail;
+    }
 }
