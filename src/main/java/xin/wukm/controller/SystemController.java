@@ -10,6 +10,10 @@
  */
 package xin.wukm.controller;
 
+import com.google.common.collect.ImmutableBiMap;
+import com.google.common.collect.Maps;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -33,12 +37,17 @@ import java.util.Map;
 @RequestMapping(value = "/api")
 public class SystemController extends BaseController {
 
+    @Autowired
+    private Environment environment;
+
     @RequestMapping(value = "/info",method = RequestMethod.GET)
     @ResponseBody
     public Object info(){
-        Map<String,Object> detail = new HashMap();
-        detail.put("time", System.currentTimeMillis());
-        return detail;
+        Map<Object,Object> p = Maps.newHashMap();
+        p.putAll(System.getProperties());
+        return ImmutableBiMap.of("evn",
+                ImmutableBiMap.of("active",environment.getActiveProfiles(),
+                        "default", environment.getDefaultProfiles()),"system.properties",p,"java_evn",System.getenv());
     }
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
