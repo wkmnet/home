@@ -16,6 +16,7 @@ import ch.qos.logback.core.rolling.RollingFileAppender
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy
 
 import static ch.qos.logback.classic.Level.INFO
+import static ch.qos.logback.classic.Level.DEBUG
 
 StringBuilder p = new StringBuilder();
 //%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}
@@ -54,7 +55,7 @@ if(isLog) {
         }
     }
 }
-logger("org.springframework", DEBUG,["CONSOLE"])
+logger("org.springframework", INFO,["CONSOLE"])
 if(isLog) {
     logger("com.vmovier.user.center.mapper", DEBUG, ["CONSOLE","FILE"])
     root(INFO, ["CONSOLE","FILE"])
