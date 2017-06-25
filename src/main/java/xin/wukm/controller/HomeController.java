@@ -28,11 +28,12 @@ import org.springframework.web.servlet.ModelAndView;
  * To change this template use File | Settings | File and Code Templates.
  */
 @Controller
-@RequestMapping(value = "/html")
+@RequestMapping(value = "/")
 public class HomeController extends BaseController {
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public ModelAndView index(ModelMap modelMap){
+        modelMap.put("title","家园-Home");
         modelMap.put("code","success");
         modelMap.put("message","地球核心");
         logger.info("model : {}", modelMap);

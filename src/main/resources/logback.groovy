@@ -55,11 +55,13 @@ if(isLog) {
         }
     }
 }
-logger("org.springframework", DEBUG, ["CONSOLE"])
+
 if(isLog) {
-    logger("com.vmovier.user.center.mapper", DEBUG, ["CONSOLE","FILE"])
+    logger("xin.wukm", INFO, ["CONSOLE","FILE"])
+    logger("org.springframework", INFO, ["CONSOLE","FILE"])
     root(INFO, ["CONSOLE","FILE"])
 } else {
-    logger("com.vmovier.user.center.mapper", DEBUG, ["CONSOLE"])
+    logger("xin.wukm", DEBUG, ["CONSOLE"])
+    logger("org.springframework", DEBUG, ["CONSOLE"])
     root(INFO, ["CONSOLE"])
 }
