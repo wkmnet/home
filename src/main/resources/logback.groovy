@@ -54,6 +54,7 @@ if(isLog) {
         }
     }
 }
+logger("org.springframework", DEBUG,["CONSOLE"])
 if(isLog) {
     logger("com.vmovier.user.center.mapper", DEBUG, ["CONSOLE","FILE"])
     root(INFO, ["CONSOLE","FILE"])

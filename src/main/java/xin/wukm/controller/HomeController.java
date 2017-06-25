@@ -10,10 +10,11 @@
  */
 package xin.wukm.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Create with IntelliJ IDEA
@@ -26,15 +27,15 @@ import org.springframework.web.bind.annotation.RestController;
  * ---------------------------------
  * To change this template use File | Settings | File and Code Templates.
  */
-@RestController
+@Controller
 @RequestMapping(value = "/html")
 public class HomeController extends BaseController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String index(ModelMap modelMap){
+    public ModelAndView index(ModelMap modelMap){
         modelMap.put("code","success");
         modelMap.put("message","地球核心");
         logger.info("model : {}", modelMap);
-        return "hello";
+        return new ModelAndView("hello");
     }
 }
