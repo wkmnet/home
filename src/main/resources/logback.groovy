@@ -62,6 +62,6 @@ if(isLog) {
     root(INFO, ["CONSOLE","FILE"])
 } else {
     logger("xin.wukm", DEBUG, ["CONSOLE"])
-    logger("org.springframework", DEBUG, ["CONSOLE"])
+    logger("org.springframework", INFO, ["CONSOLE"])
     root(INFO, ["CONSOLE"])
 }
