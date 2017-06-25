@@ -10,10 +10,10 @@
  */
 package xin.wukm.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Create with IntelliJ IDEA
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  * ---------------------------------
  * To change this template use File | Settings | File and Code Templates.
  */
-@RestController
+@Controller
 @RequestMapping(value = "/html")
 public class HomeController extends BaseController {
 

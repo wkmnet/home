@@ -15,6 +15,7 @@ import ch.qos.logback.classic.encoder.PatternLayoutEncoder
 import ch.qos.logback.core.rolling.RollingFileAppender
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy
 
+import static ch.qos.logback.classic.Level.DEBUG
 import static ch.qos.logback.classic.Level.INFO
 
 StringBuilder p = new StringBuilder();
@@ -54,6 +55,7 @@ if(isLog) {
         }
     }
 }
+logger("org.springframework", DEBUG, ["CONSOLE"])
 if(isLog) {
     logger("com.vmovier.user.center.mapper", DEBUG, ["CONSOLE","FILE"])
     root(INFO, ["CONSOLE","FILE"])
